@@ -1,4 +1,3 @@
-#Edge Service
 This is the edge service which acts as the front door and proxy for the API calls. Rate limiting Feature is added as part of this version implementation
 1. By default, it allows 2 request per minute per user for APIs which is configurable in the application YAML file
     ratelimit:
