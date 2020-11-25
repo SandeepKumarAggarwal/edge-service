@@ -34,7 +34,7 @@ This is the edge service which acts as the front door and proxy for the API call
 1. Zuul Pre Filter intercepts each incoming request
 2. System considers access control at the client ID and API combination level if set otherwise default is taken
 3. System maintains the access control tracking at the client, API level with first time access & count. These are reset if count is overshooting rate limit and time window is over
-4. If rate limits are over for user & API combination, system throws exception with HTTP Status Code as
+4. If rate limits are over for user & API combination and request is received within the time limit, system throws exception with HTTP Status Code as
 {
     "timestamp": "2020-11-25T13:12:59.671+0000",
     "status": 429,
