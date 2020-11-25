@@ -1,0 +1,21 @@
+server:
+    port: 8081
+spring:
+    datasource:
+        password: rootroot
+        url: jdbc:mysql://localhost:3306/accessdb?useSSL=false
+        username: root
+    jpa:
+        hibernate:
+            ddl-auto: update
+zuul:
+    routes:
+        firstAPI:
+            path: /firstapi/summary
+            url: forward:/
+        secondAPI:
+            path: /secondapi/summary
+            url: forward:/
+ratelimit:
+    default: 2
+    time: 1
